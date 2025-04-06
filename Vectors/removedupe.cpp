@@ -88,5 +88,5 @@ int main()
     }
     cout << endl;
 
-    return 0;
+    return 0; // Unique array: 6  Updates array: 1 2 3 4 5 6 
 }
