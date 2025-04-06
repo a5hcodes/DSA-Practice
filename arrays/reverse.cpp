@@ -2,8 +2,8 @@
 using namespace std;
 
 void reverseArr (int arr[], int size){
-    int start = 0;
-    int end = size-1;
+    int start = 0;  // index of the starting value 
+    int end = size-1; // index of the ending value. we dont know the size so we right size-1
 
     while (start < end) {
         swap(arr[start], arr[end]);
