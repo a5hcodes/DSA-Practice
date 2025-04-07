@@ -7,9 +7,9 @@ void reverseVec (vector<int>& vec, int size){
     int end = size-1;
 
     while(start < end){
-        swap(vec[start], vec[end]);
-        start++;
-        end--;
+        swap(vec[start], vec[end]); // swaps the start index value with the end index value
+        start++; // traverse forwards
+        end--; // traverses backwards
     }
 }
 
@@ -19,7 +19,7 @@ int main() {
     
     reverseVec(num, size);
     for(int i=0; i<size; i++){
-        cout << num[i] << " ";
+        cout << num[i] << " "; // prints the entire vector 
     }
     cout << endl;
 }
