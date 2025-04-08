@@ -26,20 +26,20 @@ int main()
 
         if (currSum > maxSum)
         {
-            maxSum = currSum;
-            start = tempStart;
-            end = i;
+            maxSum = currSum; // currSum becomes maxSum 
+            start = tempStart; //0
+            end = i; // end stores the index value 
         }
 
         if (currSum < 0)
         {
-            currSum = 0;
-            tempStart = i + 1;
+            currSum = 0; // resets to 0 as kandanes logic
+            tempStart = i + 1; //index incraess to 1 if currSum is greater than 0 
         }
     }
     cout << "final sum: " << maxSum << endl;
     cout << "subarray : " << endl;
-    for (int i = start; i <= end; i++)
+    for (int i = start; i <= end; i++) // loops through the start and end to print the subarray
     {
         cout << arr[i] << " ";
     }
