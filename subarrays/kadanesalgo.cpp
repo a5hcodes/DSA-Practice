@@ -8,6 +8,7 @@ using namespace std;
 // Used to find the maximum sum of a contiguous subarray in an array.
 // It works by maintaining a running sum (currentSum) and resetting it to 0 if it becomes negative.
 // The maximum value of currentSum seen during the process is the result (maxSum).
+// TC : O(n)
 
 int main()
 {
