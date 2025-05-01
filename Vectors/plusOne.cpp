@@ -58,10 +58,10 @@ vector<int> plusOne(vector<int> &digits)
             digits[i]++; // if lesser than 9, the number increments by 1
             return digits;
         }
-        digits[i] = 0; // if it is 9 it turns into 0
+        digits[i] = 0; // if it is equal to 9 it turns into 0
     }
 
-    digits.insert(digits.begin(), 1); // if it the entire array is [9,9,9] it will be [0,0,0] and there will be 1 inserted in the begininig
+    digits.insert(digits.begin(), 1); // if the entire array is [9,9,9] it will be [0,0,0] and there will be 1 inserted in the begininig to have an output like [1,0,0,0]
     return digits;
 }
 

@@ -28,7 +28,7 @@ If all assertions pass, then your solution will be accepted.*/
 // MY UNDERSTANDING
 
 /* there is a sorted array given where numbers are duplicating,
- we have to place the unique values in the fronte in a single
+ we have to place the unique values in the front in a single
  array without using another ary to store. remove the duplicate
  values and make sure the unique values are in order.
  then return k - k gives the total count of

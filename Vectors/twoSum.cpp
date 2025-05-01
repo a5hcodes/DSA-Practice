@@ -45,6 +45,7 @@ vector<int> twoSum(vector<int> &nums, int target)
 {
     int n = nums.size();
     vector<pair<int, int>> numIndex;
+
     for (int i = 0; i < n; i++)
     {
         numIndex.push_back({nums[i], i});
@@ -80,18 +81,19 @@ vector<int> twoSum(vector<int> &nums, int target)
 vector<int> twoSum(vector<int> &nums, int target)
 {
     int n = nums.size();
-    unordered_map<int, int> numMap; // this is empty intialilly 
+    unordered_map<int, int> numMap; // this is empty intialilly
 
     for (int i = 0; i < n; i++)
     {
         int complement = target - nums[i]; // the difference gets stored
 
-        if (numMap.find(complement) != numMap.end()) // checks if the diffreence is in the hashmap or not
+        if (numMap.find(complement) != numMap.end()) // checks if the complement is present in the numMap or not
         {
-            return {numMap[complement], i}; // returns the complement and current position 
+            return {numMap[complement], i}; // returns the complement and current position
         }
 
-        numMap[nums[i]] = i; // if not found , the current position value gets stored in the hashmap
+        numMap[nums[i]] = i; // if not found , the current position value gets stored in the hashmap.
+        // store the key with its index. so thar in numMap.find it is found early.
     }
     return {};
 }
