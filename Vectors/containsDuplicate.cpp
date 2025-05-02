@@ -42,22 +42,22 @@ Output: true
 // Brute Force Approach
 // Time Complexity : O(n2)
 
-// bool containsDuplicate(vector<int> &nums)
-// {
-//     int n = nums.size();
+bool containsDuplicate(vector<int> &nums)
+{
+    int n = nums.size();
 
-//     for (int i = 0; i < n; i++)
-//     {
-//         for (int j = i + 1; j < n; i++)
-//         {
-//             if (nums[i] == nums[j])
-//             {
-//                 return true;
-//             }
-//         }
-//     }
-//     return false;
-// }
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = i + 1; j < n; i++)
+        {
+            if (nums[i] == nums[j])
+            {
+                return true;
+            }
+        }
+    }
+    return false;
+}
 
 // Optimal Approach using hashtable
 /*

@@ -47,7 +47,7 @@ The order doesn’t matter, and the rest of the array beyond k can be anything.
 */
 
 // Brute Force Approach
-//  Time Complexity : O(n2)
+// Time Complexity : O(n2)
 
 vector<int> removeElement(vector<int> &nums, int val)
 {
@@ -64,8 +64,7 @@ vector<int> removeElement(vector<int> &nums, int val)
     return n; // remaining valid elements
 }
 
-
-// Two Pointer Approach 
+// Two Pointer Approach
 // Time Complexity : O(n)
 
 vector<int> removeElement(vector<int> &nums, int val)
@@ -83,5 +82,3 @@ vector<int> removeElement(vector<int> &nums, int val)
     }
     return k; // remaining valid elements
 }
-
-
