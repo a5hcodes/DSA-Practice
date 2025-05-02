@@ -24,21 +24,21 @@ Output: false
 
 // Brute Force Approach
 // Time Complexity : O(n2)
-bool containsDuplicate2(vector<int> &nums, int k)
-{
-    int n = nums.size();
-    for (int i = 0; i < n; i++)
-    {
-        for (int j = i + 1; j < n; j++)
-        {
-            if (nums[i] == nums[j] && abs(i - j) <= k)
-            {
-                return true;
-            }
-        }
-    }
-    return false;
-}
+// bool containsDuplicate2(vector<int> &nums, int k)
+// {
+//     int n = nums.size();
+//     for (int i = 0; i < n; i++)
+//     {
+//         for (int j = i + 1; j < n; j++)
+//         {
+//             if (nums[i] == nums[j] && abs(i - j) <= k)
+//             {
+//                 return true;
+//             }
+//         }
+//     }
+//     return false;
+// }
 
 // Optimal Approach Hahsmap
 // Time Complexity : O(n)
@@ -46,20 +46,21 @@ bool containsDuplicate2(vector<int> &nums, int k)
 bool containsDuplicate2(vector<int> &nums, int k)
 {
     int n = nums.size();
-    unordered_set<int> map;
-    int seen = 0;
+    unordered_set<int> window; // empty hashmap 
 
     for (int i = 0; i < n; i++)
     {
-        int diff = abs(i - seen);
-        if (diff <= k)
+        if(window.find(nums[i]) != window.end()) return true; // if nums[i] != not found return true
+
+        window.insert(nums[i]); // if not found insert current value to the hashmap 
+
+        if (window.size() > k) // if window size is greater than k 
         {
-            return true;
+            window.erase(nums[i-k]); // erase i-k i = current value and k = target window size
         }
-        map.insert(nums[i]);
-        seen++;
+        
     }
-    return false;
+    return false; // if no duplicates found.
 }
 
 int main()
