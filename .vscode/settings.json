@@ -2,7 +2,14 @@
     "files.associations": {
         "iostream": "cpp",
         "ostream": "cpp",
-        "ratio": "cpp"
+        "ratio": "cpp",
+        "__bit_reference": "cpp",
+        "__hash_table": "cpp",
+        "__string": "cpp",
+        "string": "cpp",
+        "string_view": "cpp",
+        "unordered_map": "cpp",
+        "unordered_set": "cpp"
     },
     "C_Cpp.errorSquiggles": "disabled"
 }
