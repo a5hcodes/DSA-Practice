@@ -17,7 +17,6 @@ Example 3:
 
 Input: nums = [-1,-2,-3]
 Output: -6
-
 */
 
 // Brute force
