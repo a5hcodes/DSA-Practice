@@ -60,8 +60,8 @@ int maxProduct(int n)
 
     while (n > 0)
     {
-        digits.push_back(n % 10);
-        n /= 10;
+        digits.push_back(n % 10); // n%10 extracts the last digit of the number and puts into the digits vector //124: 4 is extract here
+        n /= 10; // n/=10 removes the last digit of the number completely. //124: 4 is removes here completley.
     }
     int count = digits.size();
     for (int i = 0; i < count; i++)
@@ -75,4 +75,10 @@ int maxProduct(int n)
     return maxProd;
 }
 
-int main() {}
+int main() {
+    int n = 123456;
+
+   cout<< "Maximum Product of 2 numbers is: "<< maxProduct(n) <<endl;
+
+   return 0;
+}
