@@ -26,12 +26,13 @@ Constraints:
 1 <= arr[i] <= 1000
 */
 
+//Optimal Approach
 // Time Complexity : O(n)
 
 bool threeConsecutiveOdds(vector<int> &arr)
 {
     int n = arr.size();
-    for (int i = 0; i < n - 2; i++)
+    for (int i = 0; i < n - 2; i++) // 
     {
         if (arr[i] % 2 != 0 && arr[i + 1] % 2 != 0 && arr[i + 2] % 2 != 0)
         {
